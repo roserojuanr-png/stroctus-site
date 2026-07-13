@@ -354,7 +354,7 @@ Main image missing<br />
 <video id="heroVideo" autoplay muted loop playsinline>
 <source src="/images/stroctus-video.mp4" type="video/mp4" />
 </video>
-<button type="button" class="hero-video-mute" id="heroVideoMuteBtn" aria-label="Unmute video" onclick="var v=document.getElementById('heroVideo'); v.muted=!v.muted; this.textContent = v.muted ? '🔇' : '🔊';">&#128263;</button>
+<button type="button" class="hero-video-mute" id="heroVideoMuteBtn" aria-label="Unmute video" onclick="var v=document.getElementById('heroVideo'); v.muted=!v.muted; if(!v.muted){ v.play().catch(function(){}); } this.textContent = v.muted ? '🔇' : '🔊';">&#128263;</button>
 </div>
 </section>
 
