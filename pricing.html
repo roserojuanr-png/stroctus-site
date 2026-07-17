@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing | Stroctus</title>
+
+  <style>
+    :root {
+      --bg: #07070c;
+      --card: #121222;
+      --text: #f2f2f7;
+      --muted: #babacc;
+      --accent: #8c5bff;
+      --accent-2: #1fd1c5;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(circle at top right, #181837 0%, var(--bg) 50%);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    /* ---- NAV (shared with index.html) ---- */
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      padding: 0.9rem 1.75rem;
+      background: rgba(7, 7, 12, 0.82);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .nav-left,
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+      flex-wrap: wrap;
+    }
+
+    .site-nav .logo {
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      font-size: 0.95rem;
+      color: var(--text);
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.15s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--accent-2); }
+
+    .nav-icons {
+      display: flex;
+      align-items: center;
+      gap: 1.1rem;
+    }
+
+    .nav-icon-btn {
+      background: none;
+      border: none;
+      color: var(--muted);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.85rem;
+      font-family: inherit;
+      padding: 0;
+    }
+
+    .nav-icon-btn:hover { color: var(--text); }
+
+    .container {
+      width: min(1080px, 92vw);
+      margin: 0 auto;
+      padding: 3rem 0 4rem;
+    }
+
+    /* ---- HERO ---- */
+    .pricing-hero {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    h1 {
+      font-size: clamp(2.1rem, 5vw, 3rem);
+      margin: 0 0 0.5rem;
+      letter-spacing: 0.01em;
+    }
+
+    .lead {
+      color: var(--muted);
+      max-width: 640px;
+      margin: 0 auto;
+      font-size: 1.05rem;
+    }
+
+    /* ---- PRICING IMAGE ---- */
+    .pricing-wrap {
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.38);
+      background: #000;
+    }
+
+    .pricing-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      margin-top: 3rem;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 720px) {
+      .site-nav { padding: 0.75rem 1rem; }
+      .nav-links { gap: 1rem; }
+      .nav-left, .nav-right { gap: 1rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav class="site-nav">
+    <div class="nav-left">
+      <a class="logo" href="index.html">Stroctus</a>
+      <ul class="nav-links">
+        <li><a href="index.html#products">Products</a></li>
+        <li><a href="index.html#solutions">Solutions</a></li>
+        <li><a href="index.html#industries">Industries</a></li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="pricing.html" class="active">Pricing</a></li>
+        <li><a href="index.html#artists">Artists</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+      <div class="nav-icons">
+        <button class="nav-icon-btn" aria-label="Search">&#128269;</button>
+        <button class="nav-icon-btn" aria-label="Region">&#127760; US</button>
+        <button class="nav-icon-btn" aria-label="Sign In">&#128100; Sign In</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <div class="pricing-hero">
+      <h1>Pricing Plans</h1>
+      <p class="lead">Power your creativity with AI. Choose the plan that fits how you create.</p>
+    </div>
+
+    <div class="pricing-wrap">
+      <img src="/images/pricing-plans.jpg" alt="Stroctus pricing plans: Standard $2/month, Pro $8/month, Premier $15/month" />
+    </div>
+
+    <footer>
+      © Stroctus Records
+    </footer>
+
+  </div>
+
+</body>
+</html>
