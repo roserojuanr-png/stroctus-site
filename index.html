@@ -358,14 +358,14 @@ Main image missing<br />
 <video id="heroVideo" autoplay muted loop playsinline>
 <source src="/images/stroctus-video.mp4" type="video/mp4" />
 </video>
-<button type="button" class="hero-video-mute" id="heroVideoMuteBtn" aria-label="Unmute video" onclick="var v=document.getElementById('heroVideo'); v.muted=!v.muted; if(!v.muted){ v.play().catch(function(){}); } this.textContent = v.muted ? '🔇' : '🔊';">&#128263;</button>
+<button type="button" class="hero-video-mute" id="heroVideoMuteBtn" aria-label="Unmute video" onclick="var v=document.getElementById('heroVideo'); v.muted=!v.muted; if(!v.muted){ v.play().catch(function(){}); var vo=document.getElementById('heroVideoLeft'); if(vo){vo.muted=true;} var bo=document.getElementById('heroVideoLeftMuteBtn'); if(bo){bo.textContent='🔇';} } this.textContent = v.muted ? '🔇' : '🔊';">&#128263;</button>
 </div>
 
     <div class="hero-video-wrap hero-video-wrap-left">
       <video id="heroVideoLeft" autoplay muted loop playsinline>
         <source src="/images/stroctus-demo-video.mp4" type="video/mp4" />
       </video>
-      <button type="button" class="hero-video-mute" id="heroVideoLeftMuteBtn" aria-label="Unmute video" onclick="var v=document.getElementById('heroVideoLeft'); v.muted=!v.muted; if(!v.muted){ v.play().catch(function(){}); } this.textContent = v.muted ? '🔇' : '🔊';">&#128263;</button>
+      <button type="button" class="hero-video-mute" id="heroVideoLeftMuteBtn" aria-label="Unmute video" onclick="var v=document.getElementById('heroVideoLeft'); v.muted=!v.muted; if(!v.muted){ v.play().catch(function(){}); var vo=document.getElementById('heroVideo'); if(vo){vo.muted=true;} var bo=document.getElementById('heroVideoMuteBtn'); if(bo){bo.textContent='🔇';} } this.textContent = v.muted ? '🔇' : '🔊';">&#128263;</button>
     </div>
 </section>
 
