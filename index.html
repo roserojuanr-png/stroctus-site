@@ -199,6 +199,10 @@ padding: 0;
 
 .hero-video-mute:hover { background: rgba(0, 0, 0, 0.85); }
 
+    .hero-video-wrap-left {
+      left: 23.5%;
+    }
+
 .container {
 width: min(1080px, 92vw);
 margin: 0 auto;
@@ -356,6 +360,13 @@ Main image missing<br />
 </video>
 <button type="button" class="hero-video-mute" id="heroVideoMuteBtn" aria-label="Unmute video" onclick="var v=document.getElementById('heroVideo'); v.muted=!v.muted; if(!v.muted){ v.play().catch(function(){}); } this.textContent = v.muted ? '🔇' : '🔊';">&#128263;</button>
 </div>
+
+    <div class="hero-video-wrap hero-video-wrap-left">
+      <video id="heroVideoLeft" autoplay muted loop playsinline>
+        <source src="/images/stroctus-demo-video.mp4" type="video/mp4" />
+      </video>
+      <button type="button" class="hero-video-mute" id="heroVideoLeftMuteBtn" aria-label="Unmute video" onclick="var v=document.getElementById('heroVideoLeft'); v.muted=!v.muted; if(!v.muted){ v.play().catch(function(){}); } this.textContent = v.muted ? '🔇' : '🔊';">&#128263;</button>
+    </div>
 </section>
 
 <div class="container">
