@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solutions | Stroctus</title>
+
+  <style>
+    :root {
+      --bg: #07070c;
+      --card: #121222;
+      --text: #f2f2f7;
+      --muted: #babacc;
+      --accent: #8c5bff;
+      --accent-2: #1fd1c5;
+      --neon-blue: #4fc3f7;
+      --neon-purple: #b388ff;
+      --neon-pink: #ff4fd8;
+      --neon-green: #9dff4f;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(circle at top right, #181837 0%, var(--bg) 50%);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    /* ---- NAV (shared) ---- */
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      padding: 0.9rem 1.75rem;
+      background: rgba(7, 7, 12, 0.82);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .nav-left, .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+      flex-wrap: wrap;
+    }
+
+    .site-nav .logo {
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      font-size: 0.95rem;
+      color: var(--text);
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.15s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--accent-2); }
+
+    .nav-icons { display: flex; align-items: center; gap: 1.1rem; }
+
+    .nav-icon-btn {
+      background: none;
+      border: none;
+      color: var(--muted);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.85rem;
+      font-family: inherit;
+      padding: 0;
+    }
+
+    .nav-icon-btn:hover { color: var(--text); }
+
+    .container {
+      width: min(1180px, 94vw);
+      margin: 0 auto;
+      padding: 2.5rem 0 4rem;
+    }
+
+    /* ---- LAYOUT ---- */
+    .solutions-layout {
+      display: grid;
+      grid-template-columns: minmax(260px, 380px) 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    /* ---- LEFT: VIDEO ---- */
+    .video-panel {
+      position: relative;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(79, 195, 247, 0.35);
+      box-shadow: 0 0 24px rgba(79, 195, 247, 0.25), 0 14px 30px rgba(0, 0, 0, 0.45);
+      background: #000;
+    }
+
+    .video-panel video {
+      width: 100%;
+      display: block;
+    }
+
+    .video-mute {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      color: #f2f2f7;
+      font-size: 17px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      line-height: 1;
+      padding: 0;
+    }
+
+    .video-mute:hover { background: rgba(0, 0, 0, 0.85); }
+
+    /* ---- RIGHT: FUTURISTIC PANEL ---- */
+    .cloud-panel { text-align: center; }
+
+    .neon-title {
+      font-size: clamp(1.5rem, 3.2vw, 2.4rem);
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      margin: 0 0 1.6rem;
+      background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple), var(--neon-pink));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 0 0 30px rgba(140, 91, 255, 0.35);
+    }
+
+    .ai-core {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 1.1rem 2.2rem;
+      border-radius: 16px;
+      border: 1px solid rgba(79, 195, 247, 0.6);
+      background: radial-gradient(circle at center, rgba(79, 195, 247, 0.12), rgba(7, 7, 12, 0.6));
+      box-shadow: 0 0 26px rgba(79, 195, 247, 0.35), inset 0 0 18px rgba(79, 195, 247, 0.12);
+      font-weight: 800;
+      letter-spacing: 0.22em;
+      color: var(--neon-blue);
+      text-transform: uppercase;
+      font-size: 1.15rem;
+      text-shadow: 0 0 12px rgba(79, 195, 247, 0.8);
+    }
+
+    .ai-core small {
+      font-size: 0.8rem;
+      letter-spacing: 0.35em;
+      color: #bfe9ff;
+    }
+
+    .core-link {
+      width: 2px;
+      height: 34px;
+      margin: 0.4rem auto;
+      background: linear-gradient(180deg, var(--neon-blue), var(--accent));
+      box-shadow: 0 0 10px rgba(79, 195, 247, 0.8);
+    }
+
+    .cloud-badge {
+      display: inline-block;
+      padding: 0.7rem 2rem;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 200, 60, 0.55);
+      background: linear-gradient(180deg, rgba(35, 35, 48, 0.95), rgba(15, 15, 24, 0.95));
+      box-shadow: 0 0 22px rgba(255, 200, 60, 0.25);
+      color: #ffd75e;
+      font-weight: 700;
+      font-size: 1.15rem;
+      letter-spacing: 0.04em;
+      text-shadow: 0 0 14px rgba(255, 200, 60, 0.6);
+    }
+
+    .branch-links {
+      width: 80%;
+      height: 30px;
+      margin: 0.4rem auto 0.6rem;
+      background:
+        linear-gradient(90deg, transparent 12%, rgba(179, 136, 255, 0.7) 12.5%, transparent 13%),
+        linear-gradient(90deg, transparent 37%, rgba(79, 195, 247, 0.7) 37.5%, transparent 38%),
+        linear-gradient(90deg, transparent 62%, rgba(255, 79, 216, 0.7) 62.5%, transparent 63%),
+        linear-gradient(90deg, transparent 87%, rgba(157, 255, 79, 0.7) 87.5%, transparent 88%);
+    }
+
+    .module-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 1rem;
+    }
+
+    .module {
+      padding: 1.1rem 0.9rem;
+      border-radius: 14px;
+      background: rgba(10, 10, 18, 0.85);
+      font-weight: 700;
+      font-size: 0.98rem;
+      letter-spacing: 0.02em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.45rem;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .module:hover { transform: translateY(-4px); }
+
+    .module .icon { font-size: 1.5rem; }
+
+    .m-music {
+      border: 1px solid rgba(179, 136, 255, 0.65);
+      box-shadow: 0 0 18px rgba(179, 136, 255, 0.3), inset 0 0 14px rgba(179, 136, 255, 0.1);
+      color: var(--neon-purple);
+      text-shadow: 0 0 10px rgba(179, 136, 255, 0.7);
+    }
+
+    .m-video {
+      border: 1px solid rgba(79, 195, 247, 0.65);
+      box-shadow: 0 0 18px rgba(79, 195, 247, 0.3), inset 0 0 14px rgba(79, 195, 247, 0.1);
+      color: var(--neon-blue);
+      text-shadow: 0 0 10px rgba(79, 195, 247, 0.7);
+    }
+
+    .m-story {
+      border: 1px solid rgba(255, 79, 216, 0.65);
+      box-shadow: 0 0 18px rgba(255, 79, 216, 0.3), inset 0 0 14px rgba(255, 79, 216, 0.1);
+      color: var(--neon-pink);
+      text-shadow: 0 0 10px rgba(255, 79, 216, 0.7);
+    }
+
+    .m-ops {
+      border: 1px solid rgba(157, 255, 79, 0.65);
+      box-shadow: 0 0 18px rgba(157, 255, 79, 0.3), inset 0 0 14px rgba(157, 255, 79, 0.1);
+      color: var(--neon-green);
+      text-shadow: 0 0 10px rgba(157, 255, 79, 0.7);
+    }
+
+    .module span.desc {
+      font-weight: 400;
+      font-size: 0.8rem;
+      color: var(--muted);
+      text-shadow: none;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      margin-top: 3rem;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 860px) {
+      .solutions-layout { grid-template-columns: 1fr; }
+      .video-panel { max-width: 420px; margin: 0 auto; }
+    }
+
+    @media (max-width: 720px) {
+      .site-nav { padding: 0.75rem 1rem; }
+      .nav-links { gap: 1rem; }
+      .nav-left, .nav-right { gap: 1rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav class="site-nav">
+    <div class="nav-left">
+      <a class="logo" href="index.html">Stroctus</a>
+      <ul class="nav-links">
+        <li><a href="index.html#products">Products</a></li>
+        <li><a href="solutions.html" class="active">Solutions</a></li>
+        <li><a href="index.html#industries">Industries</a></li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="artists.html">Artists</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+      <div class="nav-icons">
+        <button class="nav-icon-btn" aria-label="Search">&#128269;</button>
+        <button class="nav-icon-btn" aria-label="Region">&#127760; US</button>
+        <button class="nav-icon-btn" aria-label="Sign In">&#128100; Sign In</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <div class="solutions-layout">
+
+      <!-- LEFT: VIDEO -->
+      <div class="video-panel">
+        <video id="solutionsVideo" autoplay muted loop playsinline>
+          <source src="/images/stroctus-solutions-video.mp4" type="video/mp4" />
+        </video>
+        <button type="button" class="video-mute" id="solutionsVideoMuteBtn" aria-label="Unmute video" onclick="var v=document.getElementById('solutionsVideo'); v.muted=!v.muted; if(!v.muted){ v.play().catch(function(){}); } this.textContent = v.muted ? '🔇' : '🔊';">&#128263;</button>
+      </div>
+
+      <!-- RIGHT: CREATIVE INTELLIGENCE CLOUD -->
+      <div class="cloud-panel">
+        <h1 class="neon-title">High Quality Audio, Video and Marketing</h1>
+
+        <div class="ai-core">
+          Stroctus
+          <small>AI</small>
+        </div>
+
+        <div class="core-link"></div>
+
+        <div class="cloud-badge">Creative Intelligence Cloud</div>
+
+        <div class="branch-links"></div>
+
+        <div class="module-grid">
+          <div class="module m-music">
+            <span class="icon">&#127925;</span>
+            Music Intelligence
+            <span class="desc">Compose, arrange &amp; master with AI</span>
+          </div>
+          <div class="module m-video">
+            <span class="icon">&#127916;</span>
+            Video Intelligence
+            <span class="desc">Generate &amp; edit visual stories</span>
+          </div>
+          <div class="module m-story">
+            <span class="icon">&#128214;</span>
+            Story Intelligence
+            <span class="desc">Lyrics, scripts &amp; narratives</span>
+          </div>
+          <div class="module m-ops">
+            <span class="icon">&#9881;&#65039;</span>
+            Creative Ops Modules
+            <span class="desc">Automate publishing &amp; marketing</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <footer>
+      © Stroctus Records
+    </footer>
+
+  </div>
+
+</body>
+</html>
