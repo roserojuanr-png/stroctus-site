@@ -146,135 +146,19 @@
 
     .video-mute:hover { background: rgba(0, 0, 0, 0.85); }
 
-    /* ---- RIGHT: FUTURISTIC PANEL ---- */
-    .cloud-panel { text-align: center; }
-
-    .neon-title {
-      font-size: clamp(1.5rem, 3.2vw, 2.4rem);
-      font-weight: 800;
-      letter-spacing: 0.03em;
-      margin: 0 0 1.6rem;
-      background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple), var(--neon-pink));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      text-shadow: 0 0 30px rgba(140, 91, 255, 0.35);
+    /* ---- RIGHT: ARCHITECTURE GRAPHIC ---- */
+    .arch-panel {
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(79, 195, 247, 0.35);
+      box-shadow: 0 0 24px rgba(79, 195, 247, 0.2), 0 14px 30px rgba(0, 0, 0, 0.45);
+      background: #000;
     }
 
-    .ai-core {
-      display: inline-flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.3rem;
-      padding: 1.1rem 2.2rem;
-      border-radius: 16px;
-      border: 1px solid rgba(79, 195, 247, 0.6);
-      background: radial-gradient(circle at center, rgba(79, 195, 247, 0.12), rgba(7, 7, 12, 0.6));
-      box-shadow: 0 0 26px rgba(79, 195, 247, 0.35), inset 0 0 18px rgba(79, 195, 247, 0.12);
-      font-weight: 800;
-      letter-spacing: 0.22em;
-      color: var(--neon-blue);
-      text-transform: uppercase;
-      font-size: 1.15rem;
-      text-shadow: 0 0 12px rgba(79, 195, 247, 0.8);
-    }
-
-    .ai-core small {
-      font-size: 0.8rem;
-      letter-spacing: 0.35em;
-      color: #bfe9ff;
-    }
-
-    .core-link {
-      width: 2px;
-      height: 34px;
-      margin: 0.4rem auto;
-      background: linear-gradient(180deg, var(--neon-blue), var(--accent));
-      box-shadow: 0 0 10px rgba(79, 195, 247, 0.8);
-    }
-
-    .cloud-badge {
-      display: inline-block;
-      padding: 0.7rem 2rem;
-      border-radius: 12px;
-      border: 1px solid rgba(255, 200, 60, 0.55);
-      background: linear-gradient(180deg, rgba(35, 35, 48, 0.95), rgba(15, 15, 24, 0.95));
-      box-shadow: 0 0 22px rgba(255, 200, 60, 0.25);
-      color: #ffd75e;
-      font-weight: 700;
-      font-size: 1.15rem;
-      letter-spacing: 0.04em;
-      text-shadow: 0 0 14px rgba(255, 200, 60, 0.6);
-    }
-
-    .branch-links {
-      width: 80%;
-      height: 30px;
-      margin: 0.4rem auto 0.6rem;
-      background:
-        linear-gradient(90deg, transparent 12%, rgba(179, 136, 255, 0.7) 12.5%, transparent 13%),
-        linear-gradient(90deg, transparent 37%, rgba(79, 195, 247, 0.7) 37.5%, transparent 38%),
-        linear-gradient(90deg, transparent 62%, rgba(255, 79, 216, 0.7) 62.5%, transparent 63%),
-        linear-gradient(90deg, transparent 87%, rgba(157, 255, 79, 0.7) 87.5%, transparent 88%);
-    }
-
-    .module-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-      gap: 1rem;
-    }
-
-    .module {
-      padding: 1.1rem 0.9rem;
-      border-radius: 14px;
-      background: rgba(10, 10, 18, 0.85);
-      font-weight: 700;
-      font-size: 0.98rem;
-      letter-spacing: 0.02em;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.45rem;
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
-    }
-
-    .module:hover { transform: translateY(-4px); }
-
-    .module .icon { font-size: 1.5rem; }
-
-    .m-music {
-      border: 1px solid rgba(179, 136, 255, 0.65);
-      box-shadow: 0 0 18px rgba(179, 136, 255, 0.3), inset 0 0 14px rgba(179, 136, 255, 0.1);
-      color: var(--neon-purple);
-      text-shadow: 0 0 10px rgba(179, 136, 255, 0.7);
-    }
-
-    .m-video {
-      border: 1px solid rgba(79, 195, 247, 0.65);
-      box-shadow: 0 0 18px rgba(79, 195, 247, 0.3), inset 0 0 14px rgba(79, 195, 247, 0.1);
-      color: var(--neon-blue);
-      text-shadow: 0 0 10px rgba(79, 195, 247, 0.7);
-    }
-
-    .m-story {
-      border: 1px solid rgba(255, 79, 216, 0.65);
-      box-shadow: 0 0 18px rgba(255, 79, 216, 0.3), inset 0 0 14px rgba(255, 79, 216, 0.1);
-      color: var(--neon-pink);
-      text-shadow: 0 0 10px rgba(255, 79, 216, 0.7);
-    }
-
-    .m-ops {
-      border: 1px solid rgba(157, 255, 79, 0.65);
-      box-shadow: 0 0 18px rgba(157, 255, 79, 0.3), inset 0 0 14px rgba(157, 255, 79, 0.1);
-      color: var(--neon-green);
-      text-shadow: 0 0 10px rgba(157, 255, 79, 0.7);
-    }
-
-    .module span.desc {
-      font-weight: 400;
-      font-size: 0.8rem;
-      color: var(--muted);
-      text-shadow: none;
+    .arch-panel img {
+      width: 100%;
+      height: auto;
+      display: block;
     }
 
     footer {
@@ -335,43 +219,9 @@
         <button type="button" class="video-mute" id="solutionsVideoMuteBtn" aria-label="Unmute video" onclick="var v=document.getElementById('solutionsVideo'); v.muted=!v.muted; if(!v.muted){ v.play().catch(function(){}); } this.textContent = v.muted ? '🔇' : '🔊';">&#128263;</button>
       </div>
 
-      <!-- RIGHT: CREATIVE INTELLIGENCE CLOUD -->
-      <div class="cloud-panel">
-        <h1 class="neon-title">High Quality Audio, Video and Marketing</h1>
-
-        <div class="ai-core">
-          Stroctus
-          <small>AI</small>
-        </div>
-
-        <div class="core-link"></div>
-
-        <div class="cloud-badge">Creative Intelligence Cloud</div>
-
-        <div class="branch-links"></div>
-
-        <div class="module-grid">
-          <div class="module m-music">
-            <span class="icon">&#127925;</span>
-            Music Intelligence
-            <span class="desc">Compose, arrange &amp; master with AI</span>
-          </div>
-          <div class="module m-video">
-            <span class="icon">&#127916;</span>
-            Video Intelligence
-            <span class="desc">Generate &amp; edit visual stories</span>
-          </div>
-          <div class="module m-story">
-            <span class="icon">&#128214;</span>
-            Story Intelligence
-            <span class="desc">Lyrics, scripts &amp; narratives</span>
-          </div>
-          <div class="module m-ops">
-            <span class="icon">&#9881;&#65039;</span>
-            Creative Ops Modules
-            <span class="desc">Automate publishing &amp; marketing</span>
-          </div>
-        </div>
+      <!-- RIGHT: ARCHITECTURE GRAPHIC -->
+      <div class="arch-panel">
+        <img src="/images/solutions-architecture.jpg" alt="Stroctus AI Creative Intelligence Cloud: High Quality Audio, Music, Video, Score, Distribution and Marketing — Music Intelligence, Video Intelligence, Story Intelligence, Creative Ops Modules, Distribution, and Intelligent Marketing." />
       </div>
 
     </div>
