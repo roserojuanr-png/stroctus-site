@@ -139,7 +139,32 @@ letter-spacing: 0.04em;
 text-transform: uppercase;
 }
 
-.hero-text-patch {
+.hero-headline-patch {
+      position: absolute;
+      left: 28%;
+      top: 3.3%;
+      width: 44%;
+      height: 5.4%;
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 0.5%;
+      pointer-events: none;
+    }
+
+    .hero-headline-patch span {
+      color: #d9b87a;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      line-height: 1.05;
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: clamp(0.8rem, 1.9vw, 1.7rem);
+    }
+
+    .hero-text-patch {
 position: absolute;
 left: 1.4%;
 top: 6.1%;
@@ -354,6 +379,7 @@ Main image missing<br />
 <code>/images/main-image.jpg</code>
 </div>
 <div class="hero-text-patch">Universal Intelligence Platform</div>
+    <div class="hero-headline-patch"><span>The Creative Cloud for Generative AI</span></div>
 <div class="hero-video-wrap">
 <video id="heroVideo" autoplay muted loop playsinline>
 <source src="/images/stroctus-video.mp4" type="video/mp4" />
@@ -373,7 +399,7 @@ Main image missing<br />
 
 <header style="text-align:center; padding: 1.5rem 0 0;">
 <p class="subtitle" style="color: var(--muted); max-width: 760px; margin: 0 auto;">
-Discovering, nurturing, and releasing exceptional music across Classical, Rock, Latin, and Experimental worlds.
+The first enterprise platform that unifies music, video, images, notation, marketing, and distribution through one AI orchestration engine.
 </p>
 </header>
 
