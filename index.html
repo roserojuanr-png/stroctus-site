@@ -407,6 +407,41 @@ font-size: 1.02rem;
 margin: 0 0 0.75rem;
 }
 
+.hero-input-patch {
+position: absolute;
+left: 1.8%;
+top: 14.8%;
+width: 16.2%;
+height: 44.5%;
+background: linear-gradient(160deg, #241a4d, #0e3a3a);
+border: 1px solid rgba(140, 91, 255, 0.30);
+border-radius: 16px;
+padding: clamp(8px, 1.6vw, 20px) clamp(8px, 1.8vw, 22px);
+box-shadow: inset 0 0 30px rgba(140,91,255,0.10);
+pointer-events: none;
+display: flex;
+flex-direction: column;
+justify-content: center;
+box-sizing: border-box;
+overflow: hidden;
+}
+
+.hero-input-patch .mission-eyebrow {
+text-transform: uppercase;
+letter-spacing: 0.12em;
+font-weight: 700;
+color: #d9b87a;
+margin: 0 0 0.6em;
+font-size: clamp(0.6rem, 1vw, 1rem);
+}
+
+.hero-input-patch .mission-text {
+color: #eef0ff;
+line-height: 1.42;
+margin: 0;
+font-size: clamp(0.5rem, 0.92vw, 0.95rem);
+}
+
 @media (max-width: 720px) {
 .site-nav { padding: 0.75rem 1rem; }
 .nav-links { gap: 1rem; }
@@ -453,6 +488,7 @@ Main image missing<br />
 <div class="hero-text-patch"></div>
     <div class="hero-headline-patch"><span>The Creative Cloud for Generative AI</span></div>
     <div class="hero-flow-patch"><span class="step">Idea</span><span class="arr">&#8594;</span><span class="step">Music</span><span class="arr">&#8594;</span><span class="step">Video</span><span class="arr">&#8594;</span><span class="step">Campaign</span><span class="arr">&#8594;</span><span class="step">Distribution</span></div>
+    <div class="hero-input-patch"><p class="mission-eyebrow">Our Mission</p><p class="mission-text">Stroctus is an applied-intelligence company that turns creative ideas into production-ready outcomes. We build and deploy AI-driven workflows across music, media, and enterprise operations, paired with hands-on consulting to ensure they ship, scale, and stick. Our mission is to close the gap between imagination and production.</p></div>
 <div class="hero-video-wrap">
 <video id="heroVideo" autoplay muted loop playsinline>
 <source src="/images/stroctus-video.mp4" type="video/mp4" />
