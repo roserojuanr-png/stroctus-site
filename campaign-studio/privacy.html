@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stroctus Campaign Studio Privacy Policy</title>
+  <meta name="description" content="How Stroctus Campaign Studio processes, uses, shares, stores, and deletes information, including Meta account and campaign data." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://stroctus.com/campaign-studio/privacy" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="512x512" href="/images/favicon-512.png" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Stroctus" />
+  <meta property="og:title" content="Stroctus Campaign Studio Privacy Policy" />
+  <meta property="og:description" content="How Stroctus Campaign Studio processes, uses, shares, stores, and deletes information, including Meta account and campaign data." />
+  <meta property="og:image" content="https://stroctus.com/images/stroctus-logo.jpg" />
+  <meta property="og:url" content="https://stroctus.com/campaign-studio/privacy" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Stroctus Campaign Studio Privacy Policy" />
+  <meta name="twitter:description" content="How Stroctus Campaign Studio processes, uses, shares, stores, and deletes information, including Meta account and campaign data." />
+  <meta name="twitter:image" content="https://stroctus.com/images/stroctus-logo.jpg" />
+
+  <style>
+    :root {
+      --bg: #07070c;
+      --card: #121222;
+      --text: #f2f2f7;
+      --muted: #babacc;
+      --accent: #8c5bff;
+      --accent-2: #1fd1c5;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(circle at top right, #181837 0%, var(--bg) 50%);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    /* ---- NAV (shared with index.html) ---- */
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      padding: 0.9rem 1.75rem;
+      background: rgba(7, 7, 12, 0.82);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .nav-left,
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+      flex-wrap: wrap;
+    }
+
+    .site-nav .logo {
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      font-size: 0.95rem;
+      color: var(--text);
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.15s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--accent-2); }
+
+    .nav-icons {
+      display: flex;
+      align-items: center;
+      gap: 1.1rem;
+    }
+
+    .nav-icon-btn {
+      background: none;
+      border: none;
+      color: var(--muted);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.85rem;
+      font-family: inherit;
+      padding: 0;
+    }
+
+    .nav-icon-btn:hover { color: var(--text); }
+
+    .container {
+      width: min(1080px, 92vw);
+      margin: 0 auto;
+      padding: 3rem 0 4rem;
+    }
+
+    /* ---- HERO ---- */
+    .page-hero {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .logo-badge {
+      width: 76px;
+      height: 76px;
+      border-radius: 18px;
+      overflow: hidden;
+      flex-shrink: 0;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    .logo-badge img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    h1 {
+      font-size: clamp(2.1rem, 5vw, 3rem);
+      margin: 0 0 0.5rem;
+      letter-spacing: 0.01em;
+      line-height: 1.15;
+    }
+
+    .lead {
+      color: var(--muted);
+      max-width: 640px;
+      margin: 0;
+      font-size: 1.05rem;
+    }
+
+    /* ---- POLICY CONTENT ---- */
+    .policy {
+      background: color-mix(in srgb, var(--card), #000 10%);
+      border: 1px solid rgba(255, 255, 255, 0.11);
+      border-radius: 16px;
+      padding: clamp(1.4rem, 4vw, 2.6rem);
+      max-width: 860px;
+    }
+
+    .policy section + section {
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .policy h2 {
+      margin: 0 0 0.75rem;
+      color: var(--text);
+      font-size: 1.25rem;
+    }
+
+    .policy p,
+    .policy li {
+      color: var(--muted);
+      font-size: 0.98rem;
+      overflow-wrap: anywhere;
+    }
+
+    .policy p { margin: 0 0 0.9rem; }
+    .policy p:last-child { margin-bottom: 0; }
+
+    .policy ul {
+      margin: 0 0 0.9rem;
+      padding-left: 1.2rem;
+    }
+
+    .policy li + li { margin-top: 0.45rem; }
+
+    .policy strong { color: var(--text); font-weight: 600; }
+
+    .policy a { color: var(--accent-2); }
+    .policy a:hover { color: var(--text); }
+
+    .meta-line {
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin: 0.5rem 0 0;
+    }
+
+    .callout {
+      background: rgba(140, 91, 255, 0.1);
+      border: 1px solid rgba(140, 91, 255, 0.35);
+      border-radius: 12px;
+      padding: 1rem 1.2rem;
+      margin: 0 0 0.9rem;
+    }
+
+    .callout p { color: var(--text); }
+
+    .subject-line {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 8px;
+      padding: 0.45rem 0.8rem;
+      color: var(--text);
+      font-family: inherit;
+      font-weight: 600;
+    }
+
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin-top: 0.4rem;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.65rem 1.3rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      border: 1px solid transparent;
+      transition: opacity 0.15s ease;
+    }
+
+    .pill:hover { opacity: 0.85; }
+
+    .policy a.pill-solid,
+    .pill-solid {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #07070c;
+    }
+
+    .policy a.pill-outline,
+    .pill-outline {
+      background: transparent;
+      border-color: rgba(255, 255, 255, 0.28);
+      color: var(--text);
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      margin-top: 3rem;
+      font-size: 0.95rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.4rem 1.4rem;
+      margin-top: 0.6rem;
+      font-size: 0.88rem;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .footer-links a:hover { color: var(--accent-2); }
+
+    @media (max-width: 720px) {
+      .site-nav { padding: 0.75rem 1rem; }
+      .nav-links { gap: 1rem; }
+      .nav-left, .nav-right { gap: 1rem; }
+      .page-hero { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav class="site-nav">
+    <div class="nav-left">
+      <a class="logo" href="/index.html">Stroctus</a>
+      <ul class="nav-links">
+        <li><a href="/index.html#products">Products</a></li>
+        <li><a href="/solutions.html">Solutions</a></li>
+        <li><a href="/industries.html">Industries</a></li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="/pricing.html">Pricing</a></li>
+        <li><a href="/artists.html">Artists</a></li>
+        <li><a href="/support.html">Support</a></li>
+      </ul>
+      <div class="nav-icons">
+        <button class="nav-icon-btn" aria-label="Search">&#128269;</button>
+        <button class="nav-icon-btn" aria-label="Region">&#127760; US</button>
+        <button class="nav-icon-btn" aria-label="Sign In" onclick="window.location.href='https://app.stroctus.com'">&#128100; Sign In</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <div class="page-hero">
+      <div class="logo-badge">
+        <img src="/images/stroctus-logo.jpg" alt="Stroctus logo" />
+      </div>
+      <div>
+        <h1>Stroctus Campaign Studio Privacy Policy</h1>
+        <p class="lead">How Stroctus Campaign Studio handles information when authorized operators prepare and manage advertising campaigns through Meta’s advertising services.</p>
+        <p class="meta-line">Effective date: October 3, 2026</p>
+      </div>
+    </div>
+
+    <article class="policy">
+
+      <section id="who-we-are">
+        <h2>1. Who we are</h2>
+        <p>Stroctus (“we,” “us,” or “our”) operates Stroctus Campaign Studio, a tool used by authorized operators to prepare, create, and manage advertising campaigns for music and other Stroctus projects through Meta’s advertising services.</p>
+        <p>This Privacy Policy explains how we handle information through Stroctus Campaign Studio. It does not describe every data practice of the Stroctus website or other Stroctus products.</p>
+        <p>Privacy contact: <a href="mailto:jr@stroctus.com">jr@stroctus.com</a><br />Website: <a href="https://stroctus.com">https://stroctus.com</a></p>
+      </section>
+
+      <section id="information-we-process">
+        <h2>2. Information we process</h2>
+        <p>Depending on the permissions granted and the features used, we process:</p>
+        <ul>
+          <li><strong>Meta account and asset information:</strong> identifiers and names of authorized advertising accounts and Facebook Pages, account status, currency, time zone, and information about permissions and Page management tasks.</li>
+          <li><strong>Authorization information:</strong> access tokens and permission information used to authenticate requests to Meta and verify access to advertising accounts and Pages.</li>
+          <li><strong>Campaign information:</strong> campaign names, advertising text, destination links, images or videos, budgets, schedules, targeting settings, and campaign, ad set, creative, and ad identifiers and statuses.</li>
+          <li><strong>Operational records:</strong> saved settings, campaign drafts, creation receipts, error information, and records used to verify operations and prevent duplicate submissions.</li>
+          <li><strong>Communications:</strong> information provided when contacting us for support, privacy inquiries, or deletion requests.</li>
+        </ul>
+        <p>We receive this information from authorized operators, from Meta’s APIs within the permissions granted, and from operation of the app.</p>
+        <p>The current app does not request Facebook passwords, payment-card details, private messages, friend lists, or Spotify listening histories. A Spotify destination link does not give us access to a listener’s Spotify account.</p>
+      </section>
+
+      <section id="how-we-use-information">
+        <h2>3. How we use information</h2>
+        <p>We use information to:</p>
+        <ul>
+          <li>Authenticate and verify authorized access to Meta accounts and Pages.</li>
+          <li>Prepare campaign drafts and carry out authorized advertising operations.</li>
+          <li>Apply and verify campaign settings, including budgets, schedules, and delivery status.</li>
+          <li>Maintain records of submitted operations and prevent accidental duplicate creation.</li>
+          <li>Troubleshoot errors, secure the app, and provide support.</li>
+          <li>Respond to privacy requests and meet applicable legal and Meta platform obligations.</li>
+        </ul>
+        <p>We access and use Meta information only for the purposes described in this policy and within the permissions granted. We do not sell or rent Meta information, use it to build unrelated personal profiles, or use it to train general-purpose AI models.</p>
+      </section>
+
+      <section id="information-sharing">
+        <h2>4. Information sharing</h2>
+        <p>We send campaign settings, advertising content, asset identifiers, and authentication information to Meta as needed to perform authorized operations. Advertising content may become publicly visible when an ad is published and delivered.</p>
+        <p>Access within Stroctus is limited to authorized people who need the information to operate or support the app.</p>
+        <p>Where service providers assist with storage, backup, security, or support, information may be processed by them only as necessary for those services, subject to appropriate restrictions. Files stored in a synchronized or backed-up folder may also be processed by the applicable storage provider.</p>
+        <p>We may disclose information where reasonably necessary to comply with applicable law, respond to valid legal process, address fraud or security incidents, or protect legal rights.</p>
+        <p>Meta and Spotify process information under their own policies when people use their services:</p>
+        <ul>
+          <li>Meta: <a href="https://www.facebook.com/privacy/policy/" rel="noopener">https://www.facebook.com/privacy/policy/</a></li>
+          <li>Spotify: <a href="https://www.spotify.com/legal/privacy-policy/" rel="noopener">https://www.spotify.com/legal/privacy-policy/</a></li>
+        </ul>
+      </section>
+
+      <section id="storage-and-security">
+        <h2>5. Storage and security</h2>
+        <p>The current version of Campaign Studio runs locally on an authorized operator’s computer. Campaign settings, drafts, uploaded creative copies, and operation records are stored in local application files.</p>
+        <p>When the app’s token-saving feature is used, access tokens are stored in macOS Keychain. The running app also holds the token in memory to authenticate requests. Connections to Meta use HTTPS.</p>
+        <p>We use reasonable safeguards, including access restrictions and controls intended to reduce unauthorized use and duplicate campaign submissions. No system or method of storage is completely secure.</p>
+      </section>
+
+      <section id="retention">
+        <h2>6. Retention</h2>
+        <p>We retain information only for as long as reasonably necessary to operate authorized campaigns, maintain relevant operational records, resolve support or security issues, and meet applicable legal obligations.</p>
+        <p>A draft’s review expiration does not necessarily delete its saved information or creative files. Tokens remain stored until removed or replaced; they may also expire or be revoked through Meta.</p>
+        <p>We review retained information and delete information that is no longer needed. We also delete applicable Meta information when required by Meta’s terms or a valid deletion request, unless retention is legally required. Any information retained for a legal obligation is restricted to that purpose.</p>
+      </section>
+
+      <section id="your-choices-and-rights">
+        <h2>7. Your choices and rights</h2>
+        <p>You may stop using the app and revoke its access through the applicable Meta account or business integration settings. Revoking access prevents further authorized access but does not itself erase previously stored local records.</p>
+        <p>Depending on applicable law, you may have rights to request access, correction, deletion, or a copy of personal information, or to object to or restrict certain processing. Where processing relies on consent, you may withdraw that consent.</p>
+        <p>Contact <a href="mailto:jr@stroctus.com">jr@stroctus.com</a> to exercise these rights. We may request limited information to verify your identity and authority over the relevant account or Page. We respond within applicable legal deadlines. You may also have the right to complain to your local data protection authority.</p>
+      </section>
+
+      <section id="data-deletion">
+        <h2>8. How to request data deletion</h2>
+        <p>Email <a href="mailto:jr@stroctus.com">jr@stroctus.com</a> with the subject:</p>
+        <p><span class="subject-line">Stroctus Campaign Studio — Data Deletion Request</span></p>
+        <p>Include:</p>
+        <ul>
+          <li>Your name and a contact email.</li>
+          <li>The relevant Facebook Page ID or advertising account ID, if known.</li>
+          <li>A description of the information you want deleted.</li>
+        </ul>
+        <p><strong>Do not send passwords, access tokens, or payment details.</strong></p>
+        <p>After verifying your request, we will delete applicable information under our control, including relevant stored authorization information, account or Page information, campaign drafts, creative copies, and operational records, except where retention is legally required. We will explain any applicable exception and confirm completion.</p>
+        <p>Deleting information from Campaign Studio does not automatically delete campaigns or other information held by Meta, stop active advertising, or delete your Meta or Spotify account. Advertising can be managed separately in Meta Ads Manager, and requests concerning those platforms should also be directed to the relevant provider.</p>
+        <p>Full instructions are also available on the <a href="/campaign-studio/data-deletion">Campaign Studio Data Deletion</a> page.</p>
+      </section>
+
+      <section id="children">
+        <h2>9. Children</h2>
+        <p>Campaign Studio is intended for adult, authorized business operators. We do not knowingly collect personal information from children under 13. If you believe a child has provided personal information to us through the app, contact us so we can investigate and delete it where appropriate.</p>
+      </section>
+
+      <section id="changes">
+        <h2>10. Changes to this policy</h2>
+        <p>We may update this policy when the app or our data practices change. We will publish the revised policy at this address and update its effective date. Where required, we will provide additional notice or obtain consent before introducing materially different processing.</p>
+      </section>
+
+      <section id="contact">
+        <h2>11. Contact</h2>
+        <p>For privacy questions or requests:</p>
+        <p>Stroctus<br />Email: <a href="mailto:jr@stroctus.com">jr@stroctus.com</a><br />Website: <a href="https://stroctus.com">https://stroctus.com</a></p>
+      </section>
+
+    </article>
+
+    <footer>
+      © Stroctus Records
+      <nav class="footer-links" aria-label="Legal">
+        <a href="/campaign-studio/privacy">Campaign Studio Privacy Policy</a>
+        <a href="/campaign-studio/data-deletion">Campaign Studio Data Deletion</a>
+      </nav>
+    </footer>
+
+  </main>
+
+</body>
+</html>

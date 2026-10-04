@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stroctus Campaign Studio — Data Deletion</title>
+  <meta name="description" content="How to request deletion of information processed through Stroctus Campaign Studio." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://stroctus.com/campaign-studio/data-deletion" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="512x512" href="/images/favicon-512.png" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Stroctus" />
+  <meta property="og:title" content="Stroctus Campaign Studio — Data Deletion" />
+  <meta property="og:description" content="How to request deletion of information processed through Stroctus Campaign Studio." />
+  <meta property="og:image" content="https://stroctus.com/images/stroctus-logo.jpg" />
+  <meta property="og:url" content="https://stroctus.com/campaign-studio/data-deletion" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Stroctus Campaign Studio — Data Deletion" />
+  <meta name="twitter:description" content="How to request deletion of information processed through Stroctus Campaign Studio." />
+  <meta name="twitter:image" content="https://stroctus.com/images/stroctus-logo.jpg" />
+
+  <style>
+    :root {
+      --bg: #07070c;
+      --card: #121222;
+      --text: #f2f2f7;
+      --muted: #babacc;
+      --accent: #8c5bff;
+      --accent-2: #1fd1c5;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(circle at top right, #181837 0%, var(--bg) 50%);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    /* ---- NAV (shared with index.html) ---- */
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      padding: 0.9rem 1.75rem;
+      background: rgba(7, 7, 12, 0.82);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .nav-left,
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+      flex-wrap: wrap;
+    }
+
+    .site-nav .logo {
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      font-size: 0.95rem;
+      color: var(--text);
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.15s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--accent-2); }
+
+    .nav-icons {
+      display: flex;
+      align-items: center;
+      gap: 1.1rem;
+    }
+
+    .nav-icon-btn {
+      background: none;
+      border: none;
+      color: var(--muted);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.85rem;
+      font-family: inherit;
+      padding: 0;
+    }
+
+    .nav-icon-btn:hover { color: var(--text); }
+
+    .container {
+      width: min(1080px, 92vw);
+      margin: 0 auto;
+      padding: 3rem 0 4rem;
+    }
+
+    /* ---- HERO ---- */
+    .page-hero {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .logo-badge {
+      width: 76px;
+      height: 76px;
+      border-radius: 18px;
+      overflow: hidden;
+      flex-shrink: 0;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    .logo-badge img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    h1 {
+      font-size: clamp(2.1rem, 5vw, 3rem);
+      margin: 0 0 0.5rem;
+      letter-spacing: 0.01em;
+      line-height: 1.15;
+    }
+
+    .lead {
+      color: var(--muted);
+      max-width: 640px;
+      margin: 0;
+      font-size: 1.05rem;
+    }
+
+    /* ---- POLICY CONTENT ---- */
+    .policy {
+      background: color-mix(in srgb, var(--card), #000 10%);
+      border: 1px solid rgba(255, 255, 255, 0.11);
+      border-radius: 16px;
+      padding: clamp(1.4rem, 4vw, 2.6rem);
+      max-width: 860px;
+    }
+
+    .policy section + section {
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .policy h2 {
+      margin: 0 0 0.75rem;
+      color: var(--text);
+      font-size: 1.25rem;
+    }
+
+    .policy p,
+    .policy li {
+      color: var(--muted);
+      font-size: 0.98rem;
+      overflow-wrap: anywhere;
+    }
+
+    .policy p { margin: 0 0 0.9rem; }
+    .policy p:last-child { margin-bottom: 0; }
+
+    .policy ul {
+      margin: 0 0 0.9rem;
+      padding-left: 1.2rem;
+    }
+
+    .policy li + li { margin-top: 0.45rem; }
+
+    .policy strong { color: var(--text); font-weight: 600; }
+
+    .policy a { color: var(--accent-2); }
+    .policy a:hover { color: var(--text); }
+
+    .meta-line {
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin: 0.5rem 0 0;
+    }
+
+    .callout {
+      background: rgba(140, 91, 255, 0.1);
+      border: 1px solid rgba(140, 91, 255, 0.35);
+      border-radius: 12px;
+      padding: 1rem 1.2rem;
+      margin: 0 0 0.9rem;
+    }
+
+    .callout p { color: var(--text); }
+
+    .subject-line {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 8px;
+      padding: 0.45rem 0.8rem;
+      color: var(--text);
+      font-family: inherit;
+      font-weight: 600;
+    }
+
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin-top: 0.4rem;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.65rem 1.3rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      border: 1px solid transparent;
+      transition: opacity 0.15s ease;
+    }
+
+    .pill:hover { opacity: 0.85; }
+
+    .policy a.pill-solid,
+    .pill-solid {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #07070c;
+    }
+
+    .policy a.pill-outline,
+    .pill-outline {
+      background: transparent;
+      border-color: rgba(255, 255, 255, 0.28);
+      color: var(--text);
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      margin-top: 3rem;
+      font-size: 0.95rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.4rem 1.4rem;
+      margin-top: 0.6rem;
+      font-size: 0.88rem;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .footer-links a:hover { color: var(--accent-2); }
+
+    @media (max-width: 720px) {
+      .site-nav { padding: 0.75rem 1rem; }
+      .nav-links { gap: 1rem; }
+      .nav-left, .nav-right { gap: 1rem; }
+      .page-hero { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav class="site-nav">
+    <div class="nav-left">
+      <a class="logo" href="/index.html">Stroctus</a>
+      <ul class="nav-links">
+        <li><a href="/index.html#products">Products</a></li>
+        <li><a href="/solutions.html">Solutions</a></li>
+        <li><a href="/industries.html">Industries</a></li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="/pricing.html">Pricing</a></li>
+        <li><a href="/artists.html">Artists</a></li>
+        <li><a href="/support.html">Support</a></li>
+      </ul>
+      <div class="nav-icons">
+        <button class="nav-icon-btn" aria-label="Search">&#128269;</button>
+        <button class="nav-icon-btn" aria-label="Region">&#127760; US</button>
+        <button class="nav-icon-btn" aria-label="Sign In" onclick="window.location.href='https://app.stroctus.com'">&#128100; Sign In</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <div class="page-hero">
+      <div class="logo-badge">
+        <img src="/images/stroctus-logo.jpg" alt="Stroctus logo" />
+      </div>
+      <div>
+        <h1>Stroctus Campaign Studio — Data Deletion</h1>
+        <p class="lead">How to request deletion of information processed through Stroctus Campaign Studio.</p>
+      </div>
+    </div>
+
+    <article class="policy">
+
+      <section id="how-to-request">
+        <h2>How to request deletion</h2>
+        <p>To request deletion of information processed through Stroctus Campaign Studio, email <a href="mailto:jr@stroctus.com">jr@stroctus.com</a> with the subject:</p>
+        <p><span class="subject-line">Stroctus Campaign Studio — Data Deletion Request</span></p>
+        <div class="btn-row">
+          <a class="pill pill-solid" href="mailto:jr@stroctus.com?subject=Stroctus%20Campaign%20Studio%20%E2%80%94%20Data%20Deletion%20Request">Email a deletion request</a>
+        </div>
+      </section>
+
+      <section id="what-to-include">
+        <h2>What to include</h2>
+        <p>So we can identify the information your request covers, include:</p>
+        <ul>
+          <li>Your name and a contact email.</li>
+          <li>The relevant Facebook Page ID or advertising account ID, if known.</li>
+          <li>A description of the information you want deleted.</li>
+        </ul>
+        <div class="callout">
+          <p><strong>Never send passwords, access tokens, or payment details.</strong></p>
+        </div>
+      </section>
+
+      <section id="verification-and-deletion">
+        <h2>Verification and deletion</h2>
+        <p>We may request limited information to verify your identity and authority over the relevant account or Page.</p>
+        <p>After verifying your request, we will delete applicable information under our control, including relevant stored authorization information, account or Page information, campaign drafts, creative copies, and operational records, except where retention is legally required. We will explain any applicable exception and confirm completion.</p>
+      </section>
+
+      <section id="what-deletion-does-not-do">
+        <h2>What deletion does not do</h2>
+        <p>Deleting information from Campaign Studio does not automatically delete campaigns or other information held by Meta, stop active advertising, or delete your Meta or Spotify account. Advertising can be managed separately in Meta Ads Manager, and requests concerning those platforms should also be directed to the relevant provider.</p>
+        <p>Likewise, revoking Campaign Studio’s access through your Meta account or business integration settings prevents further authorized access but does not itself erase previously stored local records — send a deletion request as described above.</p>
+      </section>
+
+      <section id="more-information">
+        <h2>More information</h2>
+        <p>For details on what information Campaign Studio processes and how it is used, read the <a href="/campaign-studio/privacy">Stroctus Campaign Studio Privacy Policy</a>.</p>
+        <p>Stroctus<br />Email: <a href="mailto:jr@stroctus.com">jr@stroctus.com</a><br />Website: <a href="https://stroctus.com">https://stroctus.com</a></p>
+      </section>
+
+    </article>
+
+    <footer>
+      © Stroctus Records
+      <nav class="footer-links" aria-label="Legal">
+        <a href="/campaign-studio/privacy">Campaign Studio Privacy Policy</a>
+        <a href="/campaign-studio/data-deletion">Campaign Studio Data Deletion</a>
+      </nav>
+    </footer>
+
+  </main>
+
+</body>
+</html>
