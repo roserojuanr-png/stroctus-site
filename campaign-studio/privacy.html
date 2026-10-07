@@ -27,8 +27,8 @@
       --card: #121222;
       --text: #f2f2f7;
       --muted: #babacc;
-      --accent: #8c5bff;
-      --accent-2: #1fd1c5;
+      --accent: #1F6FE0;
+      --accent-2: #5AB0FF;
     }
 
     * { box-sizing: border-box; }
@@ -36,7 +36,7 @@
     body {
       margin: 0;
       font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: radial-gradient(circle at top right, #181837 0%, var(--bg) 50%);
+      background: radial-gradient(circle at top right, #0F1E3A 0%, var(--bg) 50%);
       color: var(--text);
       line-height: 1.5;
     }
@@ -208,8 +208,8 @@
     }
 
     .callout {
-      background: rgba(140, 91, 255, 0.1);
-      border: 1px solid rgba(140, 91, 255, 0.35);
+      background: rgba(31, 111, 224, 0.1);
+      border: 1px solid rgba(31, 111, 224, 0.35);
       border-radius: 12px;
       padding: 1rem 1.2rem;
       margin: 0 0 0.9rem;
@@ -292,6 +292,11 @@
       .nav-left, .nav-right { gap: 1rem; }
       .page-hero { flex-direction: column; align-items: flex-start; }
     }
+  
+    /* Logo banner (all pages) */
+    .logo-banner { background: #0A0C14; padding: 28px 24px 34px; display: flex; justify-content: center; border-bottom: 1px solid rgba(90,176,255,.12); }
+    .logo-banner img { display: block; width: 100%; max-width: 746px; height: auto; }
+    @media (max-width: 420px) { .logo-banner { padding: 18px 16px 22px; } }
   </style>
 </head>
 
@@ -319,6 +324,11 @@
       </div>
     </div>
   </nav>
+
+  <!-- LOGO BANNER -->
+  <div class="logo-banner">
+    <img src="/images/stroctus-logo-lockup.jpg" alt="Stroctus: Building the next level intelligence" width="900" height="155" />
+  </div>
 
   <main class="container">
 
